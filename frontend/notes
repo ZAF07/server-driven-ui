@@ -1,0 +1,1 @@
+had to use: npx create-react-app@latest your-project-name to avoid using global CRA 
