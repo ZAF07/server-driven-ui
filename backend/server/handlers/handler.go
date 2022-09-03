@@ -1,8 +1,13 @@
 package handlers
 
 import (
+	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
+
+	"github.com/ZAF07/server-driven-ui/backend/server/handlers/request"
+	"github.com/ZAF07/server-driven-ui/backend/server/handlers/response"
 )
 
 const (
@@ -45,6 +50,23 @@ func (h Handler) handlePost(w http.ResponseWriter, r *http.Request) {
 
 // handleGet handles default GET requests to the application ...
 func (h Handler) handleGet(w http.ResponseWriter, r *http.Request) {
-	p := fmt.Sprintf("GET from : %+v", h.Path)
-	w.Write([]byte(p))
+	pa := &request.UsersPayload{}
+
+	err := json.NewDecoder(r.Body).Decode(&pa)
+	if err != nil {
+		log.Fatalf("Error decoding body: %+v", err)
+	}
+	fmt.Printf("HERE WE GO : %+v", pa)
+	p := fmt.Sprintf("Payload: %+v", *pa)
+
+	resp := response.Resp{
+		Payload: p,
+		Message: fmt.Sprintf("GET from : %+v", h.Path),
+		Status:  http.StatusOK,
+	}
+	reqResp, errR := json.Marshal(&resp)
+	if err != nil {
+		log.Fatalf("ERROR RESPONSE: %+v", errR)
+	}
+	w.Write([]byte(reqResp))
 }
