@@ -15,9 +15,9 @@ import (
 func InitServer() {
 	basePath := injection.GetApplicationBasePath()
 	port := injection.GetApplicationPort()
-	addr := fmt.Sprintf("%s:%s", *basePath, *port)
-
 	paths := injection.GetApplicationPaths()
+
+	addr := fmt.Sprintf("%s:%s", *basePath, *port)
 
 	r := mux.NewRouter()
 
