@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package button;
+
+option go_package = "/button";
+
+message BasePageDetails {
+  bool active = 1;
+  string navigation_section = 2;
+  string description = 3;
+};
+
+message NavigationSection {
+
+}
+
+//  STARTS HERE. This represents a single component. Can be a button etc ...
+message Component {
+  string type = 1 [json_name="type"];
+  ComponentData data = 2 [json_name="data"];
+  Action action = 3 [json_name="action"];
+  Style style = 4 [json_name="style"];
+  Layout layout = 5 [json_name="layout"];
+}
+message ComponentData {
+  string title = 1 [json_name="title"];
+  string description = 2 [json_name="description"];
+}
+
+message Action {
+  string method = 1 [json_name="method"];
+  string url = 2 [json_name="url"];
+  ActionData data = 3 [json_name="data"];
+
+}
+message ActionData {
+  string user_id = 1 [json_name="user_id"];
+  string auth_token = 2 [json_name="auth_token"];
+}
+
+
+message Style {
+  string tile_text_color = 1 [json_name="tile_text_color"];
+  string description_text_color = 2 [json_name="description_text_color"];
+  string button_size = 3 [json_name="button_size"];
+  string button_type = 4 [json_name="button_type"];
+  string border_color = 5 [json_name="border_color"];
+}
+
+message Layout {
+  string button_position = 1 [json_name="button_position"];
+  string tile_text_position = 2 [json_name="tile_text_position"];
+  string description_text_position = 3 [json_name="description_text_position"];
+  string margin = 4 [json_name="margin"];
+  string padding = 5 [json_name="padding"];
+}

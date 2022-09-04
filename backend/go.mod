@@ -8,6 +8,7 @@ require (
 	github.com/fsnotify/fsnotify v1.5.4
 	github.com/google/wire v0.5.0
 	github.com/spf13/viper v1.12.0
+	google.golang.org/protobuf v1.28.0
 )
 
 require (

@@ -23,5 +23,11 @@ get-client-logs:
 
 start: start-client start-server
 
+generate-proto:
+	echo "~~ Cleaning generated proto ~~"
+	rm -rf ./proto/structures/*
+	echo "~~ Generating protobuf ~~ "
+	protoc -I=. --go_out=./proto/structures ./proto/button_component.proto
+
 clean:
 	rm -rf ./sdui-backend

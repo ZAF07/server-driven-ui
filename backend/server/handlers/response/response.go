@@ -2,7 +2,8 @@ package response
 
 // TODO: USE protobuff
 type Resp struct {
-	Payload interface{}
-	Status  int
-	Message string
+	Payload   interface{}
+	Component interface{}
+	Status    int
+	Message   string
 }

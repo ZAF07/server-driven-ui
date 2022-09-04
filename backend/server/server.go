@@ -25,6 +25,7 @@ func InitServer() {
 	for _, path := range *paths {
 		h := handlers.NewHandler(path.Method, path.Name)
 		r.HandleFunc(h.Path, h.ServeHTTP)
+		r.Use(mux.CORSMethodMiddleware(r))
 	}
 
 	srv := &http.Server{

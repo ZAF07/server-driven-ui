@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+import Header from './components/header/Header.jsx'
+
 
 function App() {
+  const [bgColor, setBgColor] = useState();
+  const [headerProps, setHeaderProps] = useState();
+
+  useEffect(() => {
+    getData()
+  }, [])
+  
+  const getData = async () => {
+    const d = await axios.get("http://localhost:8000/home")
+    setHeaderProps(d.data.Component.header)
+      // .then(res => {
+        console.log(d.data.Component.header);
+      //   // setBgColor(res.data.Component.header.backgroundColor)
+      //   setHeaderProps(res.data.Component.header)
+      // })
+
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>{bgColor}</p>
+      { headerProps && < Header component={headerProps}/> }
     </div>
   );
 }
