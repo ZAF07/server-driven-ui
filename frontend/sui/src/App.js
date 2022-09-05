@@ -3,6 +3,10 @@ import axios from 'axios';
 
 import Header from './components/header/Header.jsx'
 
+/*
+  TODO: Add a map of the types of navigation components available. then in the render, we map the value of the component type to the actual component
+*/ 
+
 
 function App() {
   const [bgColor, setBgColor] = useState();
