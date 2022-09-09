@@ -7,6 +7,22 @@ var Dashboard = map[string]map[string]interface{}{
 		"desc":            "Description",
 		"backgroundColor": "yellow",
 	},
+	"navigation": {
+		"active":   true,
+		"location": "right",
+		"mainNavItems": []string{
+			"Inbox",
+			"Profile",
+			"Items",
+			"Browse",
+			"Cart",
+		},
+		"subNavItems": []string{
+			"Trash",
+			"Help",
+			"Contact",
+		},
+	},
 }
 
 /*
