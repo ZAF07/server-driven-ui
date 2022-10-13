@@ -44,7 +44,7 @@ function CustomDrawerComponent({customDetails}) {
       <List>
         {navState.mainNavItems.map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={() => alert(text)}>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>

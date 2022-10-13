@@ -10,6 +10,11 @@ start-server:
 	@go build -o sdui-backend
 	@./sdui-backend
 
+# Starts both FE & BE (This shows debug console for FE only, not recommended) 
+start-frontend:
+	@echo "🏁🏁 Starting Service 🏁🏁"
+	@cd ../frontend/sui && npm start
+
 start-client: 
 	@echo "🏁🏁 Starting frontend application 🏁🏁"
 	@cd ../frontend/sui && pm2 start npm -- start
@@ -26,6 +31,8 @@ get-client-logs:
 	@pm2 logs
 
 start: start-client start-server
+# NOT RECOMMENDED (Only shows FE debug console)
+start-all: start-frontend start-server
 
 generate-proto:
 	@echo "🗑 Cleaning generated proto ~~"
