@@ -10,8 +10,8 @@ export default function AboutPageDefault() {
   const { productState, productDispatch } = useContext(ProductsContext);
   console.log('PRODUCT STATE => ', productState);
 
-  const loaderData = useLoaderData();
-  console.log(loaderData);
+  const { components } = useLoaderData();
+  // console.log(loaderData);
   
   const handle = () => {
     dispatch({type: "SET_ABOUT_STORAGE", payload: "hi"})
@@ -22,7 +22,9 @@ export default function AboutPageDefault() {
       TODO: Add sections and layouts to page
       <Link to={`/contact`}>Contact Page</Link>
       <Link to={`/`}>Main Page</Link>
-      <h1>{state.type}</h1>
+      <h1>{components.header.title}</h1>
+      <p>{components.header.desc}</p>
+      <h1 style={{backgroundColor: components.header.backgroundColor}}>{state.type}</h1>
       <button onClick={handle}>Click</button>
     </>
   )

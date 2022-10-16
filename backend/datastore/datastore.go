@@ -4,7 +4,7 @@ var Dashboard = map[string]map[string]interface{}{
 	"header": {
 		"active":          true,
 		"title":           "Header Title",
-		"desc":            "Description",
+		"desc":            "Header Description",
 		"backgroundColor": "yellow",
 	},
 	"navigation": {
