@@ -8,6 +8,7 @@ var Dashboard = map[string]map[string]interface{}{
 		"backgroundColor": "yellow",
 	},
 	"navigation": {
+		"type":     "drawer",
 		"active":   true,
 		"location": "right",
 		"mainNavItems": []string{
