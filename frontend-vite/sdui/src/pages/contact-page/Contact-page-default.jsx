@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Link, Outlet, useLoaderData } from 'react-router-dom';
-import { AboutStoreContext} from '../../store/aboutPageStore/aboutStore';
+import { AboutStoreContext} from '../../store/aboutPageStore/aboutStateProvider';
 
 export default function ContactPageDefault() {
   const { state, dispatch } = useContext(AboutStoreContext) 

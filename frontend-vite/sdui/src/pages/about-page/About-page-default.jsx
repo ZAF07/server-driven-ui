@@ -1,10 +1,15 @@
 import { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import { AboutStoreContext} from '../../store/aboutPageStore/aboutStore';
+import { AboutStoreContext} from '../../store/aboutPageStore/aboutStateProvider';
+import { ProductsContext } from '../../store/ProductStore/ProductProvider';
 
 export default function AboutPageDefault() {
   const { state, dispatch } = useContext(AboutStoreContext);
   console.log('FROM ABOUT; ', state);
+
+  const { productState, productDispatch } = useContext(ProductsContext);
+  console.log('PRODUCT STATE => ', productState);
+
   const loaderData = useLoaderData();
   console.log(loaderData);
   
