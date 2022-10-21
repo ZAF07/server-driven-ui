@@ -24,6 +24,12 @@ var Dashboard = map[string]map[string]interface{}{
 			"Contact",
 		},
 	},
+	"about": { // 💡 The pathname should be used to query mongodb for a document with the identifier name the same as the pathname
+		"active":          true,
+		"title":           "About Page Layout Title",
+		"desc":            "About Page layout data",
+		"backgroundColor": "green",
+	},
 }
 
 /*

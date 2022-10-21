@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"strings"
 
 	"github.com/ZAF07/server-driven-ui/backend/datastore"
 	"github.com/ZAF07/server-driven-ui/backend/server/handlers/response"
@@ -52,7 +53,8 @@ func (h Handler) handlePost(w http.ResponseWriter, r *http.Request) {
 func (h Handler) handleGet(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	// pa := &request.UsersPayload{}
-
+	d := r.URL.Path
+	fmt.Println("THIS IS PATHNAME : ", d)
 	// err := json.NewDecoder(r.Body).Decode(&pa)
 	// if err != nil {
 	// 	log.Fatalf("Error decoding body: %+v", err)
@@ -60,9 +62,11 @@ func (h Handler) handleGet(w http.ResponseWriter, r *http.Request) {
 	// fmt.Printf("HERE WE GO : %+v", pa)
 	// p := fmt.Sprintf("Payload: %+v", *pa)
 
+	// 💡 This value should be used as the identifier to query from mongodb the page layout
+	pathName := strings.Split(r.URL.Path, "/")[1]
 	resp := response.Resp{
 		// Payload:   p,
-		Component: datastore.Dashboard,
+		Component: datastore.Dashboard[pathName],
 		Message:   fmt.Sprintf("GET from : %+v", h.Path),
 		Status:    http.StatusOK,
 	}

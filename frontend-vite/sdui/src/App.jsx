@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     path: '/about',
     element: <AboutPageDefault/>,
     errorElement: <DefaultErrorpage/>,
-    loader: () => {
+    loader: () => { // ✋ loaders are used for loading page layouts only
       return AboutPageLoader();
     }
   },
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     path: '/contact',
     element: <ContactPageDefault/>,
     errorElement: <DefaultErrorpage/>,
-    loader: () => {
+    loader: () => { // ✋ loaders are used for loading page layouts only
       return ContactPageLoader();
     },
     children: [
