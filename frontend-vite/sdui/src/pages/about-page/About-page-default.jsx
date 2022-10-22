@@ -20,13 +20,15 @@ export default function AboutPageDefault() {
     dispatch({type: "SET_ABOUT_STORAGE", payload: "hi"})
   }
 
-  // MOCK CUSTOM LAYOUT DETAILS NAV
+  // MOCK CUSTOM LAYOUT DETAILS NAV retrieved from layout server
   const mockNavLayout = {
     position: 'top',
     style: {
       backgroundColor: 'red',
     },
   }
+  
+  // Products are retrieved from props. Made available from useContext && ProductProvider
   const mockProducts = {
     products: productState.products,
     dispatch: productDispatch,
@@ -39,7 +41,7 @@ export default function AboutPageDefault() {
   }
 
   
-  // MOCK CUSTOM LAYOUT DETAILS FOOTER
+  // MOCK CUSTOM LAYOUT DETAILS FOOTER (retrieved from API call to layout server)
   const mockFooterLayout = {
     type: 'bottomFooter',
     position: 'bottom',
