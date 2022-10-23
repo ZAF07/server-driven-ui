@@ -9,9 +9,13 @@ SDUI implementation base
 
 ## Project layout
 ```
--- frontend-vite\n
-  -- sdui\n
-    -- src\n
+|-- frontend-vite
+|   |-- sdui
+|       |-- src
+            |-- components
+                |-- pageComponents
+                |   |-- { This directory contains all components like Nav, Footer, Main }
+                |
 ```
   
   
