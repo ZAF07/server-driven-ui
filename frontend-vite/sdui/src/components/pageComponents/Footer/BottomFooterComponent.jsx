@@ -9,9 +9,11 @@ import Icons from '../../../icons';
 const BottomFooterComponent = ({custom}) => {
   const [value, setValue] = useState(0);
   
-  const linkItems = custom.data.links.map(linkObj => {
-    const Icon = Icons[linkObj.style.icon]
-    return <BottomNavigationAction key={linkObj.style.title} label={linkObj.style.title} icon={<Icon/>} />
+  const footerData = custom.components.footerData;
+
+  const linkItems = footerData.map(footer => {
+    const Icon = Icons[footer.icon]
+    return <BottomNavigationAction key={footer.title} label={footer.title} icon={<Icon/>} />
   })
 
 

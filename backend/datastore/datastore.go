@@ -24,11 +24,57 @@ var Dashboard = map[string]map[string]interface{}{
 			"Contact",
 		},
 	},
-	"about": { // 💡 The pathname should be used to query mongodb for a document with the identifier name the same as the pathname
+	"about": {
+		"type":            "bottom_footer",
 		"active":          true,
 		"title":           "About Page Layout Title",
 		"desc":            "About Page layout data",
 		"backgroundColor": "green",
+		"navigation": map[string]interface{}{
+			"type":      "topNavResponsive",
+			"logoTitle": "Logo Title",
+			"logoColor": "white",
+			"active":    true,
+			"location":  "right",
+			"mainNavItems": []string{
+				"Inbox",
+				"Profile",
+				"Items",
+				"Browse",
+				"Cart",
+			},
+			"subNavItems": []string{
+				"Trash",
+				"Help",
+				"Contact",
+			},
+		},
+		"footerData": []map[string]interface{}{
+			{
+				"style": map[string]string{
+					"fontColor":       "green",
+					"backgroundColor": "yellow",
+				},
+				"title": "Find Us",
+				"icon":  "locationOnIcon",
+			},
+			{
+				"style": map[string]string{
+					"fontColor":       "orange",
+					"backgroundColor": "purple",
+				},
+				"title": "Sign In",
+				"icon":  "restoreIcon",
+			},
+			{
+				"style": map[string]string{
+					"fontColor":       "green",
+					"backgroundColor": "yellow",
+				},
+				"title": "Favourite",
+				"icon":  "favouriteIcon",
+			},
+		},
 	},
 }
 

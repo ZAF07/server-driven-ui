@@ -1,6 +1,6 @@
-import TopNavComponent from "./TopNavComponent";
+import TopNavResponsiveMenuComponent from "./TopNavComponent";
 
 const navigationComponentMap = {
-    topNav: TopNavComponent,
+    topNavResponsive: TopNavResponsiveMenuComponent,
 };
 export default navigationComponentMap;

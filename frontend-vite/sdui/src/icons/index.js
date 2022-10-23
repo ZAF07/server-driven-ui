@@ -4,7 +4,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Icons = {
   restoreIcon: RestoreIcon,
-  favoriteIcon: FavoriteIcon,
+  favouriteIcon: FavoriteIcon,
   locationOnIcon: LocationOnIcon
 }
 
