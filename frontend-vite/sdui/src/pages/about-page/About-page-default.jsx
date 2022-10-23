@@ -30,6 +30,7 @@ export default function AboutPageDefault() {
   }
   
   // 💡 Gets each page component type from layout API and pass to component map to return desired component
+  //  Retrieve data from loaders
   const PageNavigationComponent = navigationComponentMap[pageData.components.navigation.type];
   const PageFooterComponent = footerComponentMap['bottomFooter'];
 
