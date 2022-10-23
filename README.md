@@ -10,19 +10,19 @@ SDUI implementation base
 ## Project layout
 ```
 |-- frontend-vite
-|   |-- sdui
-|       |-- src
+    |-- sdui
+        |-- src
             |-- components
-            |    |-- pageComponents 💡 This directory contains all components like Nav, Footer, Main Component
-            |    |   |-- Footer
-            |    |   |-- Navigation
-            |    |   |-- Main
-            |    |
-            |    |-- sub-components 💡 This is where we store sub components. Eg. Button, Text/Sub-Text, Image or Paragraph Components (Mainly used in Sections)
-            |        |-- Button
-            |        |-- Para
-            |        |-- Image
-            |        |-- Text
+            |   |-- pageComponents 💡 This directory contains all components like Nav, Footer, Main Component
+            |   |   |-- Footer
+            |   |   |-- Navigation
+            |   |   |-- Main
+            |   |
+            |   |-- sub-components 💡 This is where we store sub components. Eg. Button, Text/Sub-Text, Image or Paragraph Components (Mainly used in Sections)
+            |       |-- Button
+            |       |-- Para
+            |       |-- Image
+            |       |-- Text
             |
             |-- sections
 
