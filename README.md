@@ -24,7 +24,13 @@ SDUI implementation base
             |   |   |-- Image
             |   |___|-- Text
             |
-            |-- sections
+            |-- sections 💡 Sections are positional layouts. For example, Gridx2/Gridx4, Rowx2/Rowx4
+            |   |-- GridTwo
+            |   |-- GridFour
+            |   |-- RowTwo
+            |   |-- RowFour
+            |
+            |
 
 ```
   
