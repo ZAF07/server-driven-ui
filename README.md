@@ -8,7 +8,7 @@ SDUI implementation base
   > Note: To start the application simply run `make start`
 
 ## Project layout
-*FrontEnd*
+*Frontend:*
 ```
 |-- frontend-vite
     |-- sdui
@@ -68,6 +68,7 @@ SDUI implementation base
             |
 
 ```
+*Backend:*
   
   
 ![Tigerlily Project (5)](https://user-images.githubusercontent.com/61228520/188310223-4f035d87-0459-42aa-b383-9627eea291ea.png)
