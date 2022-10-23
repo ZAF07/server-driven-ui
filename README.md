@@ -14,7 +14,10 @@ SDUI implementation base
 |       |-- src
             |-- components
                 |-- pageComponents
-                |   |-- { This directory contains all components like Nav, Footer, Main }
+                |   |-- 💡 This directory contains all components like Nav, Footer, Main Component
+                |-- components
+                |   |-- 💡 This is where we store sub components. Eg. Button, Text/Sub-Text, Image or Paragraph Components
+                |
                 |
 ```
   
