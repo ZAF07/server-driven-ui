@@ -8,9 +8,9 @@ SDUI implementation base
   > Note: To start the application simply run `make start`
 
 ## Project layout
--- frontend-vite
-  -- sdui
-    -- src
+-- frontend-vite\n
+  -- sdui\n
+    -- src\n
   
   
   
