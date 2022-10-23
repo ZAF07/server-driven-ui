@@ -30,6 +30,28 @@ SDUI implementation base
             |   |-- RowTwo
             |   |-- RowFour
             |
+            |-- loaders 💡 Loaders make API calls to Layout API to fetch layout data for each page
+            |    |-- AboutPageLoader
+            |    |-- BrowsePageLoader
+            |    |-- CheckoutPageLoader
+            |    |-- CartPageLayout
+            |
+            |-- pages 💡 Pages are components for each page/path/route the application has. Treat this as the parent component for each page/path/route
+            |   |-- BrowsePage
+            |   |-- CheckoutPage
+            |   |-- CartPage
+            |   |-- AboutPage
+            |   |-- ContactPage
+            |   |--DefaultErrorPage
+            |
+            |-- store 💡 Store stores all global state for the application. Stuff like Products Inventories, User Data, Cart State.
+            |   |-- ProductsStore
+            |       |-- ProductStateProvider
+            |   |-- CartStore
+            |       |-- CartStateProvider
+            |   |-- UserStore
+            |       |-- UserStateProvider
+            |
             |
 
 ```
