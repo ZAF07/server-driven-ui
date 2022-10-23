@@ -22,7 +22,7 @@ SDUI implementation base
             |   |   |-- Button
             |   |   |-- Para
             |   |   |-- Image
-            |   |   |-- Text
+            |   |___|-- Text
             |
             |-- sections
 
