@@ -19,10 +19,10 @@ SDUI implementation base
             |   |   |-- Main
             |   |
             |   |-- sub-components 💡 This is where we store sub components. Eg. Button, Text/Sub-Text, Image or Paragraph Components (Mainly used in Sections)
-            |       |-- Button
-            |       |-- Para
-            |       |-- Image
-            |       |-- Text
+            |   |   |-- Button
+            |   |   |-- Para
+            |   |   |-- Image
+            |   |   |-- Text
             |
             |-- sections
 
