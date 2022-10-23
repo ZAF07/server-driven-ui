@@ -38,19 +38,31 @@ SDUI implementation base
             |
             |-- pages 💡 Pages are components for each page/path/route the application has. Treat this as the parent component for each page/path/route
             |   |-- BrowsePage
+            |       |-- BrowsePageDefault.jsx
+            |       |-- CustomBrowsePage.jsx 
             |   |-- CheckoutPage
+            |       |-- CheckoutPageDefault.jsx
+            |       |-- CustomCheckoutPage.jsx 
             |   |-- CartPage
+            |       |-- CartPageDefault.jsx
+            |       |-- CustomCartPage.jsx 
             |   |-- AboutPage
+            |       |-- AboutPageDefault.jsx
+            |       |-- CustomAboutPage.jsx 
             |   |-- ContactPage
-            |   |--DefaultErrorPage
+            |       |-- ContactPageDefault.jsx
+            |       |-- CustomContactPage.jsx 
+            |   |-- ErrorPage
+            |       |-- DefaultErrorPage.jsx
+            |       |-- CustomErrorPage.jsx 
             |
             |-- store 💡 Store stores all global state for the application. Stuff like Products Inventories, User Data, Cart State.
             |   |-- ProductsStore
-            |       |-- ProductStateProvider
+            |       |-- ProductStateProvider.jsx
             |   |-- CartStore
-            |       |-- CartStateProvider
+            |       |-- CartStateProvider.jsx
             |   |-- UserStore
-            |       |-- UserStateProvider
+            |       |-- UserStateProvider.jsx
             |
             |
 
