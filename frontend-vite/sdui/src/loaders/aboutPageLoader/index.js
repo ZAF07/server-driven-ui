@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const AboutPageLoader = async () => {
-  const resp = await axios.get("http://localhost:8000/about")
+  const resp = await axios.get("http://localhost:8001/about")
   
   // Here i should destructure the response for the page layout.return ACTIVE==false if there are no customisation details. This will result in the page having a default layout
 

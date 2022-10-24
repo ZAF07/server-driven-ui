@@ -1,16 +1,16 @@
-import { useContext } from 'react';
+import { useContext, useReducer } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AboutStoreContext} from '../../store/aboutPageStore/aboutStateProvider';
-import { ProductsContext } from '../../store/ProductStore/ProductProvider';
+import { ProductsContext, ProductsReducer, ProductStore } from '../../store/ProductStore/ProductProvider';
 
 import navigationComponentMap from '../../components/pageComponents/Navigation/index';
 import footerComponentMap from '../../components/pageComponents/Footer';
 
 export default function AboutPageDefault() {
-  const { state, dispatch } = useContext(AboutStoreContext);
-  console.log('FROM ABOUT; ', state);
+  // const { state, dispatch } = useContext(AboutStoreContext);
+  // console.log('FROM ABOUT; ', state);
 
-  //  ONLY USECONTEXT ON COMPONENTS THAT NEEDS THE GLOBAL STATE (EG. CART, BROWSE, USER DETAILS)
+  // //  ONLY USECONTEXT ON COMPONENTS THAT NEEDS THE GLOBAL STATE (EG. CART, BROWSE, USER DETAILS)
   const { productState, productDispatch } = useContext(ProductsContext);
   console.log('PRODUCT STATE => ', productState);
 
@@ -20,7 +20,7 @@ export default function AboutPageDefault() {
   
   // Dispatch method for Products store
   const handle = () => {
-    dispatch({type: "SET_ABOUT_STORAGE", payload: "hi"})
+    productDispatch({type: "SET_ABOUT_STORAGE", payload: "hi"})
   }
   
   // Products are retrieved from props. Made available from useContext && ProductProvider
@@ -43,7 +43,7 @@ export default function AboutPageDefault() {
       <Link to={`/`}>Main Page</Link>
       <h1>{pageData.components.title}</h1>
       <p>{pageData.components.desc}</p>
-      <h1 style={{backgroundColor: pageData.components.backgroundColor}}>{state.type}</h1>
+      <h1 style={{backgroundColor: pageData.components.backgroundColor}}>{productState.name}</h1>
       <button onClick={handle}>Click</button>  
     </>
   )
@@ -59,7 +59,7 @@ export default function AboutPageDefault() {
 
     <h2>{pageData.components.title}</h2>
     <p>{pageData.components.desc}</p>
-    <h1 style={{backgroundColor: pageData.components.backgroundColor}}>{state.type}</h1>
+    <h1 style={{backgroundColor: pageData.components.backgroundColor}}>{productState.name}</h1>
     <button onClick={handle}>Click</button> 
 
     <PageFooterComponent custom={pageData} /> 
