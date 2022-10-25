@@ -1,9 +1,9 @@
-import { useReducer, useContext } from 'react';
+import { useContext } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { AboutPageLoader } from './loaders/aboutPageLoader'; 
 import { ContactPageLoader } from './loaders/contactPageLoader';
 // import { AboutStoreContext} from '../../store/aboutPageStore/aboutStateProvider';
-import { ProductStore, ProductsReducer, ProductsProvider, ProductsContext} from './store/ProductStore/ProductProvider';
+import {  ProductsContext } from './store/ProductStore/ProductProvider';
 import InitAPIClient from './api';
 
 /* JSX */

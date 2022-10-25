@@ -3,14 +3,14 @@ import StoreActions from '../../constants/actions';
 import Constants from "../../utils/constants";
 import { serialize } from 'bson';
 
-export const ProductStore = {
+const ProductStore = {
   inventories: [],
   cartItems: [],
   name: 'TigerLily',
   wsInstance: {},
 };
 
-export const ProductsReducer = (state, action) => {
+const ProductsReducer = (state, action) => {
   /*
     ❌ TODO:
       Could move all the case's logic into a helper. Can declutter the page
@@ -19,7 +19,6 @@ export const ProductsReducer = (state, action) => {
     case 'SET_ABOUT_STORAGE':
       return {...state, name: 'Got it'}
     case Constants.actions.SET_INVENTORIES:
-      console.log('YUP AM RUNNING');
       return {...state, inventories: action.payload}
     
     case Constants.actions.ADD_TO_CART:

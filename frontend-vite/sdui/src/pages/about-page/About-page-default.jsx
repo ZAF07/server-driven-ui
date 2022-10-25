@@ -1,7 +1,6 @@
-import { useContext, useReducer } from 'react';
+import { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import { AboutStoreContext} from '../../store/aboutPageStore/aboutStateProvider';
-import { ProductsContext, ProductsReducer, ProductStore } from '../../store/ProductStore/ProductProvider';
+import { ProductsContext } from '../../store/ProductStore/ProductProvider';
 
 import navigationComponentMap from '../../components/pageComponents/Navigation/index';
 import footerComponentMap from '../../components/pageComponents/Footer';
