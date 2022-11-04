@@ -23,7 +23,7 @@ func InitServer() {
 
 	// Loop the paths retrieved from the config struct and register a new route ...
 	for _, path := range *paths {
-		h := handlers.NewHandler(path.Method, path.Name)
+		h := handlers.NewHandler(path.Method, path.Path)
 		r.HandleFunc(h.Path, h.ServeHTTP)
 		r.Use(mux.CORSMethodMiddleware(r))
 	}

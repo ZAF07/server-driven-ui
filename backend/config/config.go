@@ -12,7 +12,7 @@ type AppPaths struct {
 
 //  Path Application's paths ...
 type Path struct {
-	Name   string `mapstructure:"name" json:"name"`
+	Path   string `mapstructure:"path" json:"path"`
 	Method string `mapstructure:"method" json:"method"`
 }
 
